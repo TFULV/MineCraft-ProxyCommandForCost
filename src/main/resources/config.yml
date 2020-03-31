@@ -1,0 +1,11 @@
+language:
+  listOfCommands: 'List of available commands:'
+  commandInList: '- %command% price: %cost%'
+  payMessage: '§aYou paid with a chic coin: §4-§e⛂%cost%'
+  declineMessage: '§cYou do not have enough coins, you must: §4⛂%cost%'
+list:
+  arena:
+    alias: /arena
+    cost: 15
+    giveOp: false
+    command: /ma join MobArena

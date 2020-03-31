@@ -1,0 +1,10 @@
+name: %PROJECT_NAME%
+main: %MAIN_CLASS%
+version: '%PLUGIN_VERSION%'
+api-version: '1.13'
+author: Vaflan
+website: https://github.com/TFULV/MineCraft-ProxyCommandForCost
+softdepend: [Vault]
+commands:
+  proxyCommand:
+    description: Pay and call command
