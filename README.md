@@ -7,7 +7,12 @@ Bukkit plugin - Pay and call command (possible with op permissions).
  - */proxycommand* - List of available commands
 
 ### Example of configuration proxy command
-
+    list:
+     arena:
+       alias: /arena
+       cost: 15
+       giveOp: false
+       command: /ma join MobArena
 
 ### What I would like to do
 - [ ] Reload list config
