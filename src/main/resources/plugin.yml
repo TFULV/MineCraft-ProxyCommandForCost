@@ -6,5 +6,5 @@ author: Vaflan
 website: https://github.com/TFULV/MineCraft-ProxyCommandForCost
 softdepend: [Vault]
 commands:
-  proxyCommand:
+  proxyCommands:
     description: Pay and call command

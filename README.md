@@ -4,7 +4,8 @@
 
 Bukkit plugin - Pay and call command (possible with op permissions).
 
- - */proxycommand* - List of available commands
+ - */proxycommands* - List of available commands
+ - */proxycommands reload* - Reload list from config
 
 ### Example of configuration proxy command
     list:
@@ -13,7 +14,12 @@ Bukkit plugin - Pay and call command (possible with op permissions).
        cost: 15.00
        giveOp: false
        command: /ma join MobArena
+     mySecondAway:
+       alias: /go-away
+       cost: 3
+       giveOp: true
+       command: /tp  @p 0 100 0
 
 ### What I would like to do
-- [ ] Reload list config
-- [ ] Add like Tab commands
+- [X] Reload list config
+- [ ] Auto complete commands

@@ -54,7 +54,13 @@ public class Main extends JavaPlugin implements Listener {
                 return true;
             }
 
-            if (cmd.getName().equals("proxyCommand")) {
+            if (cmd.getName().equalsIgnoreCase("proxyCommands")) {
+                if (args.length > 0 && args[0].equalsIgnoreCase("reload")) {
+                    proxyCommands.clear();
+                    reloadConfig();
+                    loadingCommands();
+                }
+
                 StringBuilder builderMessage = new StringBuilder(getLanguage("listOfCommands"));
                 for (ProxyCommand proxyCommand : proxyCommands) {
                     builderMessage
@@ -85,7 +91,6 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     private void loadingCommands() {
-        proxyCommands.clear();
         for (String commandIndex : getConfig().getConfigurationSection("list").getKeys(false)) {
             ConfigurationSection commandSection = getConfig().getConfigurationSection("list." + commandIndex);
             proxyCommands.add(new ProxyCommand(
@@ -95,7 +100,7 @@ public class Main extends JavaPlugin implements Listener {
                     commandSection.getString("command")
             ));
         }
-        getLogger().warning("Loaded " + proxyCommands.size() + " commands!");
+        getLogger().info("Loaded " + proxyCommands.size() + " commands!");
     }
 
     private String getLanguage(String key) {
